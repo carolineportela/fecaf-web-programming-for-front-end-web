@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    background-color: #1d1a1afb;
+    grid-template-rows: 120px 1fr;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+}
+
+.nav_pages {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: red;
+    justify-content: space-between;
+    box-shadow: 0px 0px 15px 0px red;
+    font-family: Righteous, sans-serif;
+}
+
+.pages {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    align-items: center;
+    display: flex;
+    padding: 50px;
+    color: #fff;
+    gap: 24px;
+}
+
+.pages a {
+    color: #fff;
+}
+
+.pages a:hover{
+    border-bottom: 4px solid #ad1212;
+    transition: .2s;
+    opacity: 0.9;
+}
+
+.logo-burgers {
+    padding: 10px;
+}
+
+.logo{
+    height: 90px;
+}
+
+#main_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    background-color: #1d1a1afb;
+}
+
+.home-site{
+    height: 550px;
+    width: 900px;
+    display: grid;
+    grid-template-areas: "img" "sinopse";
+    grid-template-rows: 400px 1fr;
+    transition: all .7s;
+    background-color: #ad12126d;
+    box-shadow: 0px 0px 5px 0px red;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-site:hover{
+    box-shadow: 0px 0px 18px 0px red;
+}
+
+.home-site img{
+    grid-area: img;
+    width: 100%;
+    display: flex;
+}
+
+.img{
+    display: flex;
+    height: 350px;
+    width: 800px;
+}
+
+.sinopse{
+    height: 100%;
+    width: 100%;
+    grid-area: sinopse;
+    display: flex;
+    width: 750px;
+    font-size: 1.3rem; 
+}
+
+.container-home {
+    height: 100%;
+    width: 100%;
+    background-image: url(../img/background-img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.container-characters {
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    flex-wrap: wrap;
+    padding: 16px;
+    color: white;
+    background-color: #1d1a1afb;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+    gap: 20px;
+    margin: 30px;
+    padding: 16px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    transition: all .7s;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 5px 0px yellow;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 18px #cfcc0e;
+    transform: scale(1.1);
+}
+
+.card__image {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.card__name {
+    color: #FFF;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 300;
+    align-items: center;
+}
+
+/* Episode */
+.container-episode {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    padding: 50px;
+    flex-direction: column;
+    background-color: #1d1a1afb;
+    gap: 20px;
+   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+}
+
+.cardEpisode {
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    transition: all .7s;
+    justify-content: center;
+    background-color: #ad1212b7;
+    box-shadow: 0px 0px 5px 0px red;
+}
+
+.cardEpisode:hover {
+    box-shadow: 0px 0px 18px 0px yellow;
+}
+
+.infos-episode {
+    display: flex;
+    width: 350px;
+    height: 250px;
+    flex-direction: column;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.name-episode {
+    letter-spacing: .15px;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    border-bottom: 2px solid rgba(34, 5, 5, 0.268);
+}
+
+.infos-episode li {
+    display: flex;
+    gap: 20px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.season,
+.lancamento,
+.views,
+.episode{
+    font-weight: 600;
+}
+
+@media (max-width:640px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .nav_pages{
+        height: 70px;
+    }
+
+    .logo-burgers{
+        display: flex;
+        align-items: center;  
+    }
+
+    .logo{
+        height: 30px;
+    }
+
+    .pages{
+        font-size: 1rem;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .home-site{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        height: 500px;
+        width: 330px;
+    }
+
+    .img{
+        height: 200px;
+        width: 300px;
+    }
+
+    .sinopse{
+        display: flex;
+        width: 300px;
+        height: 200px;
+        font-size: 1.2rem;
+    }
+
+    .container-characters{
+        height: 100%;
+    }
+
+    .container-episode{
+        padding: 30px;
+        justify-content: center;
+    }
+
+    .cardEpisode {
+        display: flex;
+        height: 250px;
+        width: 350px;
+    }
+    
+    .name-episode{
+        font-size: 1.25rem;
+    }
+
+    .infos-episode li {
+        font-size: 1.25rem;
+    }
+}
